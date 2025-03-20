@@ -25,8 +25,7 @@ Download the evaluation.ipynb file and the output.csv file in the System backend
 ## System front-end startup
 
 Download the folder System front-end code, open it and enter python -m http.server {port} in the command line of the folder to successfully start the system front-end project.
-```
-python
+```python
 helloworld
 ```
 
