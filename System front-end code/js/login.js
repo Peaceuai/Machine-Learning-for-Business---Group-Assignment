@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         
-        console.log('Username:', username);
-        console.log('Password:', password);
-        
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://127.0.0.1:5000/login', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
