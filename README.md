@@ -29,20 +29,26 @@ Download the folder System front-end code, open it and enter
 python -m http.server {port}
 ```
 
+## System backend startup
+
+Download the folder System backend code, install all dependencies, and run the export_model_and_scaler.py file to generate the model, and then start the flask_app.py file to start the backend service.
+
 ## Results
 
- The below picture is about the CNN network
+The following figure shows the performance of each model
  
-![image16](https://github.com/user-attachments/assets/ced89a80-0b36-4ef8-80af-797c23939db1)
+![image](https://github.com/user-attachments/assets/0cabc6b3-e8bc-42f5-b2fe-2c30f1537c19)
 
- The below picture is about the train line
- 
- ![image13](https://github.com/user-attachments/assets/64f10423-7588-4ec1-bf60-ec9a860bfdd9)
+![image](https://github.com/user-attachments/assets/1597ed62-7852-4b4f-8ed1-0ed5d0b95eba)
 
- The below picture is about the predict result
- 
- ![image15](https://github.com/user-attachments/assets/bc2a4087-d63b-47f2-ac1f-ae05b787e9c7)
+The following figure shows the system we developed
+
+![image](https://github.com/user-attachments/assets/6dfcf064-ce15-474c-b79f-68d6d5df62ed)
+
+![image](https://github.com/user-attachments/assets/e1c994f0-f40c-40c2-b998-c9914cc83d7d)
+
+![image](https://github.com/user-attachments/assets/47e291aa-18cc-458f-82dd-c6d557fe4cfa)
 
 ## Reference
 
-https://learn.microsoft.com/zh-cn/windows/ai/windows-ml/tutorials/pytorch-data
+https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database?resource=download
