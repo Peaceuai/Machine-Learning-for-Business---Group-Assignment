@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Testing System - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation bar -->
+        <div class="top-nav">
+            <h1>Diabetes Testing System</h1>
+            <div class="user-info">
+                <span id="currentUser">Welcome, ${currentUser}</span>
+                <button id="logoutBtn" class="logout-btn">Log out</button>
+            </div>
+        </div>
+        
+        <!-- Breadcrumb navigation -->
+        <div class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="main.html">Front Page</a></li>
+                <li class="breadcrumb-item active" id="currentPage">Detection</li>
+            </ul>
+        </div>
+        
+        <!-- Content area -->
+        <div class="content-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active" data-page="detection"><i class="fas fa-stethoscope"></i> <span>Detection</span></a></li>
+                    <li><a href="#" data-page="history"><i class="fas fa-history"></i> <span>History</span></a></li>
+                </ul>
+            </div>
+            
+            <!-- Main content -->
+            <div class="main-content">
+                <!-- Detection page -->
+                <div id="detectionPage" class="content-page active">
+                    <div class="content-card">
+                        <h2>Diabetes Risk Test</h2>
+                        <form id="detectionForm">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="pregnancies">Number of times pregnant</label>
+                                    <input type="number" id="pregnancies" name="pregnancies" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="glucose">Plasma glucose concentration a 2 hours in an oral glucose tolerance test (mg/dL)</label>
+                                    <input type="number" id="glucose" name="glucose" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bmi">Body mass index (weight in kg/(height in m)^2)</label>
+                                    <input type="number" id="bmi" name="bmi" step="0.1" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dpf">Diabetes pedigree function</label>
+                                    <input type="number" id="dpf" name="dpf" step="0.01" min="0" max="2.5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age (years)</label>
+                                    <input type="number" id="age" name="age" min="0" required>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Start Detection</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Test results -->
+                    <div id="resultCard" class="content-card" style="display: none; margin-top: 20px;">
+                        <h2>Test Results</h2>
+                        <div id="resultContent"></div>
+                    </div>
+                </div>
+                
+                <!-- History page -->
+                <div id="historyPage" class="content-page" style="display: none;">
+                    <div class="content-card">
+                        <h2>Historical Test Records</h2>
+                        <div id="historyContent">
+                            <table class="history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Number of times pregnant</th>
+                                        <th>Plasma glucose concentration</th>
+                                        <th>Body mass index</th>
+                                        <th>Diabetes pedigree function</th>
+                                        <th>Age (years)</th>
+                                        <th>Test results</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="historyTableBody">
+                                    <!-- Records will be added dynamically via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
