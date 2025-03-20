@@ -1,10 +1,11 @@
 # Machine-Learning-for-Business---Group-Assignment
 # README
-Our idea for this project is to use CNN to effectively extract the spatial hierarchical features of images to classify them. The main technical framework used is Pytorch, and the main programming language is Python. Pytorch is a deep learning framework that can help us build and train CNN well.
+We trained 7 models based on the diabetes dataset, namely Logistic Regression, XGBoost, MLP, XGBoost + optimizer, and random forest, as well as two integrated models, voting classifier and stacking model. Through evaluation, we determined the model with the highest accuracy and combined it with the medical system we developed to provide medical staff with simple diabetes detection functions.
 
 ## Requirements
 
 - Colab
+- Python3.11
 
 ## Running the mode of training
 
